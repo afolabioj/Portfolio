@@ -1,0 +1,654 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+.banner{
+    position: relative;
+    height: 100vh;
+    background: url(images/Dairy.jpg);
+    background-position: right;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: 0.5s;
+}
+header.sticky{
+    background: #ffffff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0,1);
+}
+.banner h1{
+    font-size: 1em;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.5em;
+    margin-left: 30px;
+}
+.banner h1 span{
+    font-size: 1em;
+    font-weight: 400;
+}
+.banner h2{
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #ffffff;
+}
+.btn{
+    position: relative;
+    background: linear-gradient(to right, #2196f3 50%, #02020200 50%);
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #ffffff;
+    margin-top: 80px;
+    padding: 10px 30px;
+    left: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .4s ease-out;
+}
+.btn:hover{
+    color: #ffffff;
+    background-position: left bottom;
+}
+.typewrite{
+    text-align: center;
+    color:#fff;
+    padding-top:10em;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+.social-links{
+    transform: scale(0.5);
+    position: absolute;
+    left: 20px;
+    top: 62%;
+}
+.social-links a{
+    margin: 20px;  
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    color: #ffffff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+    left: 20px;
+}
+.sticky .logo{
+    color: #111;
+}
+header ul{
+    position: relative;
+    display: flex;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    display: inline-block;
+    margin: 0 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+/* header ul li a.active{
+    background: #fff;
+    color: #2b1055;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+} */
+header ul li a:hover{
+    transform: translateY(3px);
+}
+header ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+header ul li a:hover::after{
+    width: 100%;
+    display: block;
+}
+.sticky ul li a{
+    color: #111;
+}
+.heading{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+.heading h1{
+    font-weight: 600;
+    font-size: 30px;
+}
+.heading h1::after{
+    content: '';
+    display: block;
+    width: 80px;
+    margin-left: 45%;
+    border: 2px solid #ff004f;
+}
+section.parallax {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 30%;
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(#2b1055,#7597de);
+}
+
+.parallax::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522,transparent);
+    z-index: 100;
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.parallax #moon {
+    mix-blend-mode: screen;
+}
+
+.parallax #text{
+    position: absolute;
+    color: #2b1055;
+    white-space: nowrap;
+    letter-spacing: 10px;
+    font-size: 7vw;
+    z-index: 9;
+}
+
+#mountains_front{
+    z-index: 10;
+}
+
+#btn {
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    display: inline-block;
+    z-index: 9;
+    transform: translateY(100px);
+}
+section.About{
+    padding-top: 10%;
+    background-image: url(images/img_1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: table;
+    background-attachment: fixed;
+    
+}
+.About .heading h1{
+    color: #fff;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.contentBx{
+    padding-right: 30px;
+}
+.contentBx h2{
+    font-size: 27px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    color: #fff;
+}
+.contentBx p{
+    font-size: 16px;
+    line-height: 2em;
+    text-align: justify;
+    color: #fff;
+}
+.w50{
+    min-width: 58%;
+    padding-left: 40px;
+
+}
+.w50 h3{
+    margin: 20px 0;
+    color: #fff;
+}
+.w50 p{
+    font-size: 14px;
+}
+.w50 img{
+    width: 80%;
+    height: 60%;
+    border-radius: 30px;
+    margin-top: 10%;
+    padding-right: 20%;
+}
+section img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    overflow-x: hidden;
+}
+
+.resume_btn{
+    position: relative;
+    background: linear-gradient(to right, #2196f3 50%, #02020200 50%);
+    display: inline-block;
+    border: 2px solid rgb(17, 90, 185);
+    border-radius: 20px;
+    margin: 50px 10px;
+    padding: 10px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .4s ease-out;
+}
+.resume_btn:hover{
+    color: #ffffff;
+    background-position: left bottom;
+}
+.resume{
+    text-decoration: none;
+    font-weight: 600;
+    color: #ffffff;
+}
+.services{
+    background: #111;
+    padding-top: 10%;
+
+}
+.heading.white{
+    color: #ffffff;
+}
+.services .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.services .content .servicesBx{
+    padding: 40px 20px;
+    background: #222;
+    color: #fff;
+    max-width: 340px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    transition: background 0.8s, transfrom 0.5s;
+}
+.services .content .servicesBx:hover{
+    background: #2196f3;
+    transform: translateY(-10px);
+}
+.services .content .servicesBx img{
+    max-width: 100px;
+    height: 120px;
+    filter: invert(1);
+}
+/* .services .content .servicesBx h1{
+    font-size: 20px;
+    font-weight: 600;
+} */
+.servicesBx h2{
+    padding: 10px;
+}
+.servicesBx p{
+    font-size: 12px;
+    line-height: 20px;
+}
+.projects .heading{
+    padding: 70px;
+}
+.projects .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+.projects .content .projectBx{
+    position: relative;
+    background-size: cover;
+    overflow: hidden;
+}
+.projects .content .projectBx img{
+    max-width: 100%;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.5s;
+}
+.projectBx:hover img{
+    transform: scale(1.2);
+}
+.projectBx{
+    padding-bottom: 20px;
+}
+.projectBx:hover .layer{
+    height: 100%;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #0460d8);
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    bottom: 0;
+    padding: 0 40px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.layer p{
+    font-size: 14px;
+    line-height: 20px;
+}
+.contact{
+    background: #111;
+}
+.contact .heading {
+    color: rgb(255, 255, 255);
+}
+.contact .heading h1{
+    padding: 3%;
+}
+.contact .heading p{
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+.content .contactInfo{
+    padding-left: 30px;
+}
+.contactInfo h2{
+    margin: 0;
+}
+.contactInfo{
+    min-width: 40%;
+    height: 100%;
+}
+.contactInfoBx{
+    position: relative;
+}
+.contactInfoBx .box{
+    position: relative;
+    padding: 20px;
+    display: flex;
+}
+.contactInfoBx .box icon{
+    min-width: 40px;
+    padding-top: 4px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+}
+.icon .fa{
+    color: #ffffff;
+}
+.contactInfoBx .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contactInfoBx .box .text h2{
+    font-weight: 400;
+    color: #2196f3;
+    margin-bottom: 0;
+}
+.contactInfoBx .social-links{
+    transform: scale(0.5);
+    position: relative;
+    display: flex;
+}
+/* .contactInfoBx .social-links a{
+    display: inline-block;
+} */
+.formBx{
+    min-width: 60%;
+    margin-bottom: 90px;
+}
+form{
+    width: 90%;
+    margin-right: 50px;
+}
+.contact .formBx{
+    display: flex;
+    flex-direction: row;
+}
+.formBx form{
+    display: flex;
+    flex-direction: column;
+}
+.formBx form h2, .contactInfo h2{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.formBx form input, .formBx form textarea{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background:
+     #222;
+    color: #fff;
+    resize: none;
+}
+.formBx form textarea{
+    min-height: 200px;
+}
+.formBx form input::placeholder, .formBx form textarea::placeholder{
+    color: #999;
+}
+.formBx form input[type="submit"]{
+    max-width: 100px;
+    background: #2196f3;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 30px;
+}
+.copyright{
+    background: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/*----------------Responsives---------------*/
+@media (max-width: 991px){
+    header, header.sticky{
+        padding: 20px 50px;
+        z-index: 1000;
+    }
+    .menu{
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0,2);
+    }
+    .menu.active{
+        left: 0;
+    }
+    header ul li a{
+        color: #111;
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    .menu li{
+        margin: 30px;
+    }
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background: url(images/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active{
+        background: url(images/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+    header.sticky .toggle{
+        filter: invert(1);
+    }
+    .heading h1::after{
+        width: 60px;
+        margin-left: 35%;
+    }
+    .social-links{
+        top: 70%;
+        left: 0;
+    }
+    section{
+        padding: 50px 50px;
+    }
+    .banner{
+        padding: 150px 50px 100px;
+    }
+    .banner h1{
+        font-size: 1.5em;
+    }
+    .banner h2{
+        font-size: 1em;
+    }
+    .btn{
+        margin-top: 50px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .parallax{
+        display: none;
+    }
+
+    .About h1{
+        padding-top: 90px;
+    }
+    .contact h1{
+        font-size: 24px;
+        padding-top: 30px;
+    }
+    .contentBx h2{
+        font-size: 20px;
+    }
+    .content{
+        flex-direction: column;
+    }
+    .w50{
+        margin-bottom: 20px;
+    }
+    .services .content .servicesBx{
+        width: 100%;
+        margin:  10px;
+    }
+    .projects .heading{
+        padding: 0;
+    }
+    .projects .content .projectBx{
+        width: 100%;
+        padding: 10px;
+    }
+    .contact .heading p{
+        top: 3px;
+    }
+}
+
+@media (max-width: 600px){
+    header, header.sticky{
+        padding: 20px 20px;
+    }
+    .banner{
+        padding: 150px 50px 100px;
+    }
+    section{
+        padding: 20px 20px;
+    }
+}
